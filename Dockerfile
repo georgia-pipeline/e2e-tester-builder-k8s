@@ -60,6 +60,7 @@ ADD e2e.sh /out/usr/bin/e2e.sh
 
 FROM scratch
 WORKDIR /
+
 ENV KUBECONFIG /etc/in-cluster-config.yaml
 ENTRYPOINT ["/usr/bin/e2e.sh"]
 COPY --from=build /out /
